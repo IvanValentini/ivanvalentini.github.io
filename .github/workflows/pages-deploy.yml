@@ -44,10 +44,6 @@ jobs:
         with:
           ruby-version: 3.3
           bundler-cache: true
-      
-      # https://github.com/cotes2020/jekyll-theme-chirpy/discussions/1809
-      - name: npm build
-        run: npm install && npm run build
 
       - name: Build site
         run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
